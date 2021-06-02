@@ -6,28 +6,11 @@ import os
 import torch.nn as nn
 import torch.nn.functional as F
 
+import ptah_net
+
 num_channels = 3  #number of colors on images (B&W=1, RGB=3)
 model_save_path = 'models/ptah.pth'
 ocr_dir = 'data'
-
-class Net(nn.Module):
-    def __init__(self,num_classes):
-        super(Net, self).__init__()
-        self.conv1 = nn.Conv2d(num_channels, 6, 5)
-        self.pool = nn.MaxPool2d(2, 2)
-        self.conv2 = nn.Conv2d(6, 32, 5)
-        self.fc1 = nn.Linear(32 * 5 * 5, 1000)
-        self.fc2 = nn.Linear(1000, 128)
-        self.fc3 = nn.Linear(128, num_classes)
-
-    def forward(self, x):
-        x = self.pool(F.relu(self.conv1(x)))
-        x = self.pool(F.relu(self.conv2(x)))   
-        x = x.view(-1, 32 * 5 * 5)
-        x = F.relu(self.fc1(x))
-        x = F.relu(self.fc2(x))
-        x = self.fc3(x)
-        return x
 
 def load_model(net,model_load_path):
     if torch.cuda.is_available():
@@ -86,7 +69,8 @@ def test_ocr_dataset(ocr_dir,model,ocr_classes,class_names,dataloaders):
 if __name__ == '__main__':    
     ocr_classes,class_names,dataloaders = load_ocr_dataset()
 
-    model = Net(len(class_names))
+    model = ptah_net.PtahNet(len(class_names))
+
     load_model(model,model_save_path)
 
     test_ocr_dataset(ocr_dir,model,ocr_classes,class_names,dataloaders)  
