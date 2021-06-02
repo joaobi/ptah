@@ -130,8 +130,6 @@ class Net(nn.Module):
         print("Learning Rate:",learning_rate)        
 
     def _loaddata(self):
-
-
         data_transforms = {
                 'train': transforms.Compose([
                     transforms.Resize([32, 32]),        
@@ -141,18 +139,6 @@ class Net(nn.Module):
                     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
                 ]),
                 'val': transforms.Compose([
-                    transforms.Resize([32, 32]),
-                    transforms.Grayscale(self.num_channels),
-                    transforms.ToTensor(),
-                    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-                ]),
-                'test': transforms.Compose([
-                    transforms.Resize([32, 32]),
-                    transforms.Grayscale(self.num_channels),
-                    transforms.ToTensor(),
-                    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-                ]),  
-                'full_test': transforms.Compose([
                     transforms.Resize([32, 32]),
                     transforms.Grayscale(self.num_channels),
                     transforms.ToTensor(),
