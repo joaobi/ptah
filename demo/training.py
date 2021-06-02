@@ -6,6 +6,10 @@ num_epochs = 50
 learning_rate = 0.0009978380594782084
 model_save_path = 'models/ptah.pth'
 
+
+
+
+
 if __name__ == '__main__':    
 
     net = pn.Net(num_channels,"../data")
