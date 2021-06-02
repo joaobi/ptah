@@ -5,9 +5,10 @@ import numpy as np
 import cv2
 import imutils
 from pathlib import Path
-from tqdm import tqdm
+from tqdm import tqdm, trange
 
 import ptahlibs as sc
+import sys
 
 class Ptah:
     def __init__(self, out_folder, fonts_folder, width,heigh,BCK_COLOR):
@@ -26,8 +27,13 @@ class Ptah:
         print(' Generating template images')
         print('-------------------------------------------')
 
-        for i in tqdm(range(len(self.sign_codes))):
+        t = trange(len(self.sign_codes), desc='Bar desc', leave=True)
+        for i in t:
+            # t.set_description("Bar desc (file %i)" % i, refresh=True, refresh=True)
             sign = self.sign_codes[i]
+
+            t.set_description("Processing sign %s..." % sign, refresh=True)
+            
             # print('Processing [%s]...'%(sign))
             for font_filename in self.fontfiles:
                 for size_sign in font_sizes:
@@ -35,14 +41,19 @@ class Ptah:
                     for op in operations:                        
                         filename = os.path.join(self.template_out_folder,sign+"_"+font_filename.split('.')[0]+"_"+str(size_sign)+"_"+op+".jpg")
                         if not os.path.exists(filename): # only generate image if not already there
-                            self._generate_image(sign,self.sign_hex_values[i],font_filename,size_sign,op)
+                            self._generate_image(sign,self.sign_hex_values[i],font_filename,size_sign,op)            
+ 
 
     def generate_train_val_images(self,output_folder):
         print('-------------------------------------------')
         print(' Generating train and val datasets')
         print('-------------------------------------------')
-        for i in tqdm(range(len(self.sign_codes))):
+        t = trange(len(self.sign_codes), desc='Bar desc', leave=True)
+        for i in t:
             sign = self.sign_codes[i]
+
+            t.set_description("Processing sign %s..." % sign, refresh=True)
+
             # print('Processing [%s]...'%(sign))       
             # Need to Try Exception here and create dir if needed
             files = os.listdir(os.path.join(self.template_out_folder+'/'))
@@ -105,11 +116,19 @@ class Ptah:
                 raise Exception()
         except OSError as e:
             print(" Folder '%s'  does not exist"%(self.fonts_folder))
+            sys.exit()
         except Exception as e:
             # print(e)
             print("Folder '%s' does not contain any fonts"%(self.fonts_folder))
+            sys.exit()
 
-        font_files = [f+sc.hiero_fonts[f]['ext'] for f in sc.hiero_fonts.keys() if sc.hiero_fonts[f]['ext']]
+
+        font_files = os.listdir(self.fonts_folder)
+        # result = [f for f in files if re.search(sign+'_', f)] 
+        # print(font_files)
+
+        # font_files = [f+sc.hiero_fonts[f]['ext'] for f in sc.hiero_fonts.keys() if sc.hiero_fonts[f]['ext']]
+        # print(font_files)
 
         print("Loading %i fonts from folder '%s'..."%(len(font_files), self.fonts_folder))
 

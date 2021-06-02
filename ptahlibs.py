@@ -87,19 +87,19 @@ gardiner_dict ={
     'Z4' : {'hex' : 0x133ED, 'dec':''}, # Dual stroke. Egyptian numeral 2, plural, majority, collective concept (e.g. meat, jwf), duality
 }
 
-# Fonts used for dataset generation 
-hiero_fonts = {
-    "AaronUMdCAlpha100" : {'ext':".ttf",'font_size':190,'adjust':0},
-    "JSeshFont" : {'ext':".ttf",'font_size':140,'adjust':0},
-    "Aegyptus" : {'ext':".otf",'font_size':190,'adjust':0},
-    "Code2003-egdm" : {'ext':".ttf",'font_size':140,'adjust':0.21},
-    "NotoSansEgyptianHieroglyphs-Regular" : {'ext':".ttf",'font_size':100,'adjust':0.21},
-    "NewGardinerSMP" : {'ext':".ttf",'font_size':190,'adjust':0},
-    "seguihis" : {'ext':".ttf",'font_size':140,'adjust':0.3},
-    "SINUHE" : {'ext':".ttf",'font_size':190,'adjust':0},
-    "AbydosB" : {'ext':".ttf",'font_size':140,'adjust':0},
-    "AbydosR" : {'ext':".ttf",'font_size':140,'adjust':0}, 
-    "AaronBasicRTLAlpha100" : {'ext':".ttf",'font_size':190,'adjust':0},    
-    "AegyptusBold" : {'ext':".otf",'font_size':190,'adjust':0},
-    "Code2003-W8nn" : {'ext':".ttf",'font_size':140,'adjust':0.21},
-}
+# # Fonts used for dataset generation 
+# hiero_fonts = {
+#     "AaronUMdCAlpha100" : {'ext':".ttf",'font_size':190,'adjust':0},
+#     "JSeshFont" : {'ext':".ttf",'font_size':140,'adjust':0},
+#     "Aegyptus" : {'ext':".otf",'font_size':190,'adjust':0},
+#     "Code2003-egdm" : {'ext':".ttf",'font_size':140,'adjust':0.21},
+#     "NotoSansEgyptianHieroglyphs-Regular" : {'ext':".ttf",'font_size':100,'adjust':0.21},
+#     "NewGardinerSMP" : {'ext':".ttf",'font_size':190,'adjust':0},
+#     "seguihis" : {'ext':".ttf",'font_size':140,'adjust':0.3},
+#     "SINUHE" : {'ext':".ttf",'font_size':190,'adjust':0},
+#     "AbydosB" : {'ext':".ttf",'font_size':140,'adjust':0},
+#     "AbydosR" : {'ext':".ttf",'font_size':140,'adjust':0}, 
+#     "AaronBasicRTLAlpha100" : {'ext':".ttf",'font_size':190,'adjust':0},    
+#     "AegyptusBold" : {'ext':".otf",'font_size':190,'adjust':0},
+#     "Code2003-W8nn" : {'ext':".ttf",'font_size':140,'adjust':0.21},
+# }
