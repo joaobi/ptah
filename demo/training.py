@@ -59,6 +59,7 @@ def train_model(net,dataloaders,dataset_sizes):
         since = time.time()
 
         device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        print('Training on: ',device)
 
         criterion = nn.CrossEntropyLoss()
         optimizer = optim.SGD(net.parameters(), lr=learning_rate, momentum=0.9)

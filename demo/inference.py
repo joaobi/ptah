@@ -17,7 +17,10 @@ def load_model(net,model_load_path):
         net.load_state_dict(torch.load(model_load_path))
     else:
         net.load_state_dict(torch.load(model_load_path, map_location=torch.device('cpu')))
-        
+    
+    if torch.cuda.is_available():  
+        net.cuda()
+
     net.eval()
 
 def load_ocr_dataset():
@@ -49,10 +52,12 @@ def test_ocr_dataset(ocr_dir,model,ocr_classes,class_names,dataloaders):
     correct = 0
     total = 0
 
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
     with torch.no_grad():
         for i, (inputs, labels) in enumerate(dataloaders['ocr']):
             if torch.cuda.is_available():            
-                inputs = inputs.to(model.device)
+                inputs = inputs.to(device)
             outputs = model(inputs)
             _, preds = torch.max(outputs,1)
             total += labels.size(0)
@@ -61,13 +66,13 @@ def test_ocr_dataset(ocr_dir,model,ocr_classes,class_names,dataloaders):
             correct += (l_preds == l_labels).sum().item()
 
             print('Ground Truth: ', ' '.join('%5s' % ocr_classes[labels[j]] for j in range(len(labels))))
-            print('Predicted   : ', ' '.join('%5s' % class_names[preds[j]] for j in range(len(preds))))        
+            print('Predicted   : ', ' '.join('%5s' % class_names[preds[j]] for j in range(len(preds))))       
 
     print('Accuracy of the network on the test (OCR) images: %d %%' % (
     100 * correct / total)) 
 
 if __name__ == '__main__':    
-    ocr_classes,class_names,dataloaders = load_ocr_dataset()
+    ocr_classes,class_names,dataloaders = load_ocr_dataset()  
 
     model = ptah_net.PtahNet(len(class_names))
 
