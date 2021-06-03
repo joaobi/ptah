@@ -55,9 +55,8 @@ class Ptah:
             t.set_description("Processing sign %s..." % sign, refresh=True)
 
             # print('Processing [%s]...'%(sign))       
-            # Need to Try Exception here and create dir if needed
             files = os.listdir(os.path.join(self.template_out_folder+'/'))
-            result = [f for f in files if re.search(sign+'_', f)] 
+            result = [f for f in files if re.search('^'+sign+'_', f)] 
 
             dataset_size = len(result)
             n_val = round(dataset_size*0.3)
@@ -69,7 +68,8 @@ class Ptah:
 
             self._create_images(output_folder,'train', train_imgs,sign)
             self._create_images(output_folder,'val', val_imgs,sign)
-   
+
+
 
     def _create_images(self,output_folder,out_dir, images,sign):
         full_path = output_folder+'/'+out_dir+'/'+sign
@@ -85,6 +85,13 @@ class Ptah:
                     os.path.join(output_folder+'/'+out_dir+'/'+sign,filename+'_'+str(2)+"_t.jpeg"))
 
     def _generate_image(self,sign,hex_code,font_filename,font_size,operation = ''):
+
+        # do not generate small images that were only meant for cropping
+        if operation != 'crop' and font_size in [20,50,75]:
+            return
+        elif operation == 'crop' and font_size not in [20,50,75,200]:
+            return
+
         im,w,h,glyph_text,draw,font = self._write_sign(sign,hex_code,font_filename,font_size)
 
         if operation == 'tc': # Top center
