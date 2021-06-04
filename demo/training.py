@@ -166,4 +166,6 @@ if __name__ == '__main__':
 
     train_model(net,dataloaders,dataset_sizes)
 
+    torch.save(net.state_dict(), model_save_path)
+
     validate_dataset(net,dataloaders['val'],len(class_names))

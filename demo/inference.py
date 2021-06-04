@@ -43,7 +43,7 @@ def load_ocr_dataset():
                                             shuffle=True, num_workers=4)
                 for x in ['ocr']}
 
-    print('Sings in the OCR Dataset:',image_datasets['ocr'].classes)
+    print('Signs in the OCR Dataset:',image_datasets['ocr'].classes)
     ocr_classes = image_datasets['ocr'].classes
 
     return ocr_classes,class_names,dataloaders
@@ -73,6 +73,8 @@ def test_ocr_dataset(ocr_dir,model,ocr_classes,class_names,dataloaders):
 
 if __name__ == '__main__':    
     ocr_classes,class_names,dataloaders = load_ocr_dataset()  
+
+    print(len(class_names))
 
     model = ptah_net.PtahNet(len(class_names))
 
