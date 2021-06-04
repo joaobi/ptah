@@ -63,10 +63,13 @@ def test_ocr_dataset(ocr_dir,model,ocr_classes,class_names,dataloaders):
             total += labels.size(0)
             l_preds = np.array([class_names[preds[j]] for j in range(len(preds))])
             l_labels = np.array([ocr_classes[labels[j]] for j in range(len(labels))]) 
-            correct += (l_preds == l_labels).sum().item()
+            correct += (l_preds == l_labels).sum().item()        
+
 
             print('Ground Truth: ', ' '.join('%5s' % ocr_classes[labels[j]] for j in range(len(labels))))
-            print('Predicted   : ', ' '.join('%5s' % class_names[preds[j]] for j in range(len(preds))))       
+            print('Predicted   : ', ' '.join('%5s' % class_names[preds[j]] for j in range(len(preds))))  
+            break     
+
 
     print('Accuracy of the network on the test (OCR) images: %d %%' % (
     100 * correct / total)) 
