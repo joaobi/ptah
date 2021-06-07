@@ -1,0 +1,5 @@
+PIllow
+numpy
+opencv-python
+imutils
+tqdm
