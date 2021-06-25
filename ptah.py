@@ -63,6 +63,7 @@ class Ptah:
 
                 for size_sign in font_sizes:
                     operations = ['','bc','crop']
+                    # operations = ['']
                     for op in operations:                        
                         filename = os.path.join(self.template_out_folder,sign+"_"+font_filename.split('.')[0]+"_"+str(size_sign)+"_"+op+".jpg")
                         if not os.path.exists(filename): # only generate image if not already there
@@ -244,7 +245,6 @@ class Ptah:
         egyptus_values = [ sc.gardiner_dict[f].get('Aegyptus') if sc.gardiner_dict[f].get('Aegyptus') else -1  for f in sc.gardiner_dict if sc.gardiner_dict[f]]
         egyptianhiero_values = [ sc.gardiner_dict[f].get('EgyptianHiero') if sc.gardiner_dict[f].get('EgyptianHiero') else -1  for f in sc.gardiner_dict if sc.gardiner_dict[f]]
         
-
         print("Loading %s gardiner signs..."%(len(codes)))
 
         return codes,hex_values,egyptus_values,egyptianhiero_values

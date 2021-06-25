@@ -65,6 +65,7 @@ gardiner_dict ={
     'M5' : {'hex' : 0x131B4, 'dec':''}, 
 
     # N -  Sky, earth, water
+    'N5' : {'hex' : 0x131F3, 'dec':''}, # Land with grains
     'N16' : {'hex' : 0x131FE, 'dec':''}, # Land with grains
     'N17' : {'hex' : 0x131FF, 'dec':''}, # Land
 
