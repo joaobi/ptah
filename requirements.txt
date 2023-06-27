@@ -1,5 +1,6 @@
 PIllow
 numpy
-opencv-python
 imutils
+#opencv-python
 tqdm
+svglib

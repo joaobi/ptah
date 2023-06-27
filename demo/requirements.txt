@@ -1,0 +1,9 @@
+PIllow
+numpy
+imutils
+torch 
+torchvision 
+torchaudio
+opencv-python
+tqdm
+svglib

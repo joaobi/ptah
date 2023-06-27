@@ -1,4 +1,5 @@
 # Dictionary for the Unicode values for each sign Gardiner sign
+# https://www.unicode.org/charts/PDF/U13000.pdf
 gardiner_dict ={
     # 1 consonants
     'AA1': {'hex': 0x1340d, 'dec':'8861'},
@@ -46,9 +47,127 @@ gardiner_dict ={
 
     # A	Man and his occupations
     'A1' : {'hex' : 0x13000, 'dec':''}, #Seated man (I)
+    'A2' : {'hex' : 0x13001, 'dec':''}, #Seated man, man to mouth - Added 22 June 2023 !98%, 60m training (cpu, Work Surface)
+    'A3' : {'hex' : 0x13002, 'dec':''}, #Seated man, similar to A1, leg streched back - Added 22 June 2023 !99%, 79m training (cpu, Work Surface)
+    'A4' : {'hex' : 0x13003, 'dec':''}, #Seated man, .... - Added 22 June 2023 !99%, 99m training (cpu, Work Surface)
+    'A5' : {'hex' : 0x13004, 'dec':''}, #Seated man, .... - Added 22 June 2023 !99%, 87m training (cpu, Work Surface)
+    'A5A' : {'hex' : 0x13005, 'dec':''}, #Seated man, .... - Added 23 June 2023 ! 99%, 99m training (cpu, Work Surface)
+    'A6' : {'hex' : 0x13006, 'dec':''}, #Seated man, .... - Added 23 June 2023 ! 99%, 102m training (cpu, Work Surface)
+    'A6A' : {'hex' : 0x13007, 'dec':''}, #Seated man, .... - Added 23 June 2023 ! 99%, 113m training (cpu, Work Surface)    
+    'A6B' : {'hex' : 0x13008, 'dec':''}, #Seated man, .... - Added 23 June 2023 ! 99%, 95m training (cpu, Work Surface)
+    'A7' : {'hex' : 0x13009, 'dec':''}, # .... - Added 24 June 2023 ! 99%, 115m training (cpu, Work Surface)
+    'A8' : {'hex' : 0x1300A, 'dec':''}, # .... - Added 24 June 2023 ! 99%, 115m training (cpu, Work Surface)
+    'A9' : {'hex' : 0x1300B, 'dec':''}, # .... - Added 24 June 2023 ! 99%, 115m training (cpu, Work Surface)
+    'A10' : {'hex' : 0x1300C, 'dec':''}, # .... - Added 24 June 2023 ! 99%, 115m training (cpu, Work Surface)
+    'A11' : {'hex' : 0x1300D, 'dec':''}, # .... - Added 24 June 2023 ! 99%, 115m training (cpu, Work Surface)
+    'A12' : {'hex' : 0x1300E, 'dec':''}, # .... - Added 24 June 2023 ! 99%, 115m training (cpu, Work Surface)
+    'A13' : {'hex' : 0x1300F, 'dec':''}, # .... - Added 24 June 2023 ! 99%, 115m training (cpu, Work Surface)
+    'A14' : {'hex' : 0x13010, 'dec':''}, # .... - Added 24 June 2023
+    'A14A' : {'hex' : 0x13011, 'dec':''}, # .... - Added 24 June 2023
+    'A15' : {'hex' : 0x13012, 'dec':''}, # .... - Added 24 June 2023
+    'A16' : {'hex' : 0x13013, 'dec':''}, # .... - Added 24 June 2023
+    'A17' : {'hex' : 0x13014, 'dec':''}, # .... - Added 24 June 2023
+    'A17A' : {'hex' : 0x13015, 'dec':''}, # .... - Added 24 June 2023
+    'A18' : {'hex' : 0x13016, 'dec':''}, # .... - Added 24 June 2023
+    'A19' : {'hex' : 0x13017, 'dec':''}, # .... - Added 24 June 2023
+    'A20' : {'hex' : 0x13018, 'dec':''}, # .... - Added 24 June 2023
     'A21' : {'hex' : 0x13019, 'dec':''}, # man holding staff with handkerchief: Civil Servant (sr), Courtier (smr), High Official, strike (achwj)
-    'A40' : {'hex' : 0x1302D, 'dec':''}, #seated god, Ptah, Month (mnṯw) divine/heavenly I (j),(jnk), me, myself (wj) God
+    'A22' : {'hex' : 0x1301A, 'dec':''}, # .... - Added 24 June 2023
+    'A23' : {'hex' : 0x1301B, 'dec':''}, # .... - Added 24 June 2023
+    'A24' : {'hex' : 0x1301C, 'dec':''}, # .... - Added 24 June 2023
+    'A25' : {'hex' : 0x1301D, 'dec':''}, # .... - Added 24 June 2023
+    'A26' : {'hex' : 0x1301E, 'dec':''}, # .... - Added 24 June 2023
+    'A27' : {'hex' : 0x1301F, 'dec':''}, # .... - Added 24 June 2023
+    'A28' : {'hex' : 0x13020, 'dec':''}, # .... - Added 24 June 2023    
+    'A29' : {'hex' : 0x13021, 'dec':''}, # .... - Added 24 June 2023
     'A30' : {'hex' : 0x13022, 'dec':''},
+    'A31' : {'hex' : 0x13023, 'dec':''}, # .... - Added 24 June 2023
+    'A32' : {'hex' : 0x13024, 'dec':''}, # .... - Added 24 June 2023
+    'A32A' : {'hex' : 0x13025, 'dec':''}, # .... - Added 24 June 2023
+    'A33' : {'hex' : 0x13026, 'dec':''}, # .... - Added 24 June 2023
+    'A34' : {'hex' : 0x13027, 'dec':''}, # .... - Added 24 June 2023
+    'A35' : {'hex' : 0x13028, 'dec':''}, # .... - Added 24 June 2023
+    'A36' : {'hex' : 0x13029, 'dec':''}, # .... - Added 24 June 2023
+    'A37' : {'hex' : 0x1302A, 'dec':''}, # .... - Added 24 June 2023
+    'A38' : {'hex' : 0x1302B, 'dec':''}, # .... - Added 24 June 2023
+    'A39' : {'hex' : 0x1302C, 'dec':''}, # .... - Added 24 June 2023
+    'A40' : {'hex' : 0x1302D, 'dec':''}, #seated god, Ptah, Month (mnṯw) divine/heavenly I (j),(jnk), me, myself (wj) God
+    'A40A' : {'hex' : 0x1302E, 'dec':''}, # .... - Added 24 June 2023
+    'A41' : {'hex' : 0x1302F, 'dec':''}, # .... - Added 24 June 2023
+    'A42' : {'hex' : 0x13030, 'dec':''}, # .... - Added 24 June 2023
+    'A42A' : {'hex' : 0x13031, 'dec':''}, # .... - Added 24 June 2023
+    'A43' : {'hex' : 0x13032, 'dec':''}, # .... - Added 24 June 2023
+    'A43A' : {'hex' : 0x13033, 'dec':''}, # .... - Added 24 June 2023
+    'A44' : {'hex' : 0x13034, 'dec':''}, # .... - Added 24 June 2023
+    'A45' : {'hex' : 0x13035, 'dec':''}, # .... - Added 24 June 2023
+    'A45A' : {'hex' : 0x13036, 'dec':''}, # .... - Added 24 June 2023
+    'A46' : {'hex' : 0x13037, 'dec':''}, # .... - Added 24 June 2023
+    'A47' : {'hex' : 0x13038, 'dec':''}, # .... - Added 24 June 2023
+    'A48' : {'hex' : 0x13039, 'dec':''}, # .... - Added 24 June 2023
+    'A49' : {'hex' : 0x1303A, 'dec':''}, # .... - Added 24 June 2023
+    'A50' : {'hex' : 0x1303B, 'dec':''}, # .... - Added 24 June 2023
+    'A51' : {'hex' : 0x1303C, 'dec':''}, # .... - Added 24 June 2023
+    'A52' : {'hex' : 0x1303D, 'dec':''}, # .... - Added 24 June 2023
+    'A53' : {'hex' : 0x1303E, 'dec':''}, # .... - Added 24 June 2023
+    'A54' : {'hex' : 0x1303F, 'dec':''}, # .... - Added 24 June 2023
+    'A55' : {'hex' : 0x13040, 'dec':''}, # .... - Added 24 June 2023
+    'A56' : {'hex' : 0x13041, 'dec':''}, # .... - Added 24 June 2023
+    'A57' : {'hex' : 0x13042, 'dec':''}, # .... - Added 24 June 2023
+    'A58' : {'hex' : 0x13043, 'dec':''}, # .... - Added 24 June 2023
+    'A59' : {'hex' : 0x13044, 'dec':''}, # .... - Added 24 June 2023
+    'A60' : {'hex' : 0x13045, 'dec':''}, # .... - Added 24 June 2023
+    'A61' : {'hex' : 0x13046, 'dec':''}, # .... - Added 24 June 2023
+    'A62' : {'hex' : 0x13047, 'dec':''}, # .... - Added 24 June 2023
+    'A63' : {'hex' : 0x13048, 'dec':''}, # .... - Added 24 June 2023
+    'A64' : {'hex' : 0x13049, 'dec':''}, # .... - Added 24 June 2023
+    'A65' : {'hex' : 0x1304A, 'dec':''}, # .... - Added 24 June 2023
+    'A66' : {'hex' : 0x1304B, 'dec':''}, # .... - Added 24 June 2023
+    'A67' : {'hex' : 0x1304C, 'dec':''}, # .... - Added 24 June 2023
+    'A68' : {'hex' : 0x1304D, 'dec':''}, # .... - Added 24 June 2023
+    'A69' : {'hex' : 0x1304E, 'dec':''}, # .... - Added 24 June 2023
+    'A70' : {'hex' : 0x1304F, 'dec':''}, # .... - Added 24 June 2023
+
+    # G - Womand and her occupations
+    'B1' : {'hex' : 0x13050, 'dec':''}, # .... - Added 24 June 2023    
+    'B2' : {'hex' : 0x13051, 'dec':''}, # .... - Added 24 June 2023  
+    'B3' : {'hex' : 0x13052, 'dec':''}, # .... - Added 24 June 2023
+    'B4' : {'hex' : 0x13053, 'dec':''}, # .... - Added 24 June 2023
+    'B5' : {'hex' : 0x13054, 'dec':''}, # .... - Added 24 June 2023
+    'B5A' : {'hex' : 0x13055, 'dec':''}, # .... - Added 24 June 2023
+    'B6' : {'hex' : 0x13056, 'dec':''}, # .... - Added 24 June 2023
+    'B7' : {'hex' : 0x13057, 'dec':''}, # .... - Added 24 June 2023
+    'B8' : {'hex' : 0x13058, 'dec':''}, # .... - Added 24 June 2023
+    'B9' : {'hex' : 0x13059, 'dec':''}, # .... - Added 24 June 2023
+
+    # C - Antropomorphic deities
+    'C1' : {'hex' : 0x1305A, 'dec':''}, # .... - Added 24 June 2023
+    'C2' : {'hex' : 0x1305B, 'dec':''}, # .... - Added 24 June 2023
+    'C2A' : {'hex' : 0x1305C, 'dec':''}, # .... - Added 24 June 2023
+    'C2B' : {'hex' : 0x1305D, 'dec':''}, # .... - Added 24 June 2023
+    'C2C' : {'hex' : 0x1305E, 'dec':''}, # .... - Added 24 June 2023
+    'C3' : {'hex' : 0x1305F, 'dec':''}, # .... - Added 24 June 2023
+    'C4' : {'hex' : 0x13060, 'dec':''}, # .... - Added 24 June 2023
+    'C5' : {'hex' : 0x13061, 'dec':''}, # .... - Added 24 June 2023
+    'C6' : {'hex' : 0x13062, 'dec':''}, # .... - Added 24 June 2023
+    'C7' : {'hex' : 0x13063, 'dec':''}, # .... - Added 24 June 2023
+    'C8' : {'hex' : 0x13064, 'dec':''}, # .... - Added 24 June 2023
+    'C9' : {'hex' : 0x13065, 'dec':''}, # .... - Added 24 June 2023
+    'C10' : {'hex' : 0x13066, 'dec':''}, # .... - Added 24 June 2023
+    'C10A' : {'hex' : 0x13067, 'dec':''}, # .... - Added 24 June 2023
+    'C11' : {'hex' : 0x13068, 'dec':''}, # .... - Added 24 June 2023
+    'C12' : {'hex' : 0x13069, 'dec':''}, # .... - Added 24 June 2023
+    'C13' : {'hex' : 0x1306A, 'dec':''}, # .... - Added 24 June 2023
+    'C14' : {'hex' : 0x1306B, 'dec':''}, # .... - Added 24 June 2023
+    'C15' : {'hex' : 0x1306C, 'dec':''}, # .... - Added 24 June 2023
+    'C16' : {'hex' : 0x1306D, 'dec':''}, # .... - Added 24 June 2023
+    'C17' : {'hex' : 0x1306E, 'dec':''}, # .... - Added 24 June 2023
+    'C18' : {'hex' : 0x1306F, 'dec':''}, # .... - Added 24 June 2023
+    'C19' : {'hex' : 0x13070, 'dec':''}, # .... - Added 24 June 2023
+    'C20' : {'hex' : 0x13071, 'dec':''}, # .... - Added 24 June 2023
+    'C21' : {'hex' : 0x13072, 'dec':''}, # .... - Added 24 June 2023
+    'C22' : {'hex' : 0x13073, 'dec':''}, # .... - Added 24 June 2023
+    'C23' : {'hex' : 0x13074, 'dec':''}, # .... - Added 24 June 2023
+    'C24' : {'hex' : 0x13075, 'dec':''}, # .... - Added 24 June 2023
 
     # G - Birds
     'G26' : {'hex' : 0x1315D, 'dec':''}, # sacred Ibis on standard Ibis (hb) Id. ḏḥwtj	God Thoth, the god of scribes

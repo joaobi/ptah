@@ -26,16 +26,38 @@ More details at: https://github.com/HieroglyphsEverywhere/Fonts/blob/master/Hier
 
   
 ### Python dependencies
-tba
+
+PIllow, numpy, imutils, tqdm, svglib
 
 ## File Structure
 
-hierogenerator.py - calls the data generator  
-ptah.py - class that does all ther work  
-ptahlibs.py - file with the Gardiner codes (sign and unicode)  
-/fonts - location where to place the uncompressed fonts  
-/template-images - output directory for the template signs. Will be created automatically.  
-/data - output directory for the training and validation dataset. Will be created automatically.  
-/demo - (future) location for demo apps
+* hierogenerator.py - calls the data generator  
+* ptah.py - class that does all ther work  
+* ptahlibs.py - file with the Gardiner codes (sign and unicode)  
+* /fonts - location where to place the uncompressed fonts  
+* /template-images - output directory for the template signs. Will be created automatically.  
+* /data - output directory for the training and validation dataset. Will be created automatically.  
+* /demo - location for demo apps
 
+## Execution
+```shell
+python hierogenerator.py
+```
 
+## Demo environment
+
+The code incluces a demo environment composed of a sample computer vision (cv) training script using (`training.py`) and a a set of OCR sample Jupyter notebooks using the cv model previously trained.
+
+### Train a sample classiffication model
+The script `demo\training.py` includes sample code using Pytorch to create a classification model for Ancient Egyptian Hieroglyphs.
+
+#### Python dependencies for demo
+pytorch - for `training.py` script and notebooks
+ipykernel - for notebooks 
+
+#### Execution
+```shell
+cd demo
+
+pythontraining.py
+```
